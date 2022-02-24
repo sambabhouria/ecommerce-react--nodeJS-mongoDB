@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+./shoe-shop-server/.env
+../shoe-shop-server/.env
+
 # production
 /build
 
