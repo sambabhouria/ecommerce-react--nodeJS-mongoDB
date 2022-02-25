@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import logo from '../images/favicon.png';
 import $ from "jquery";
 
 const Header = () => {
@@ -72,7 +73,8 @@ const Header = () => {
             <Link className="dropdown-toggle" data-bs-toggle="dropdown" to="#">
               <img
                 className="img-xs rounded-circle"
-                src="/images/favicon.png"
+                // src="images/favicon.png"
+                src={logo}
                 alt="User"
               />
             </Link>

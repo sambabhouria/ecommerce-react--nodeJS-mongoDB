@@ -22,7 +22,6 @@ const App = () => {
     <Router>
       <Switch>
         <Route path="/" component={HomeScreen} exact />
-        <Route path="/admin" component={ Admin } />
         <Route path="/search/:keyword" component={HomeScreen} exact />
         <Route path="/page/:pagenumber" component={HomeScreen} exact />
         <Route
@@ -38,6 +37,7 @@ const App = () => {
         <PrivateRouter path="/payment" component={PaymentScreen} />
         <PrivateRouter path="/placeorder" component={PlaceOrderScreen} />
         <PrivateRouter path="/order/:id" component={OrderScreen} />
+        <Route path="/admin" component={ Admin } />
         <Route path="*" component={NotFound} />
       </Switch>
     </Router>
