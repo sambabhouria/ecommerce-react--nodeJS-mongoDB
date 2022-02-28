@@ -11,7 +11,6 @@ const ProductsStatistics = () => {
           <img
             alt=""
             style={{ width: "100%", height: "350px", objectFit: "contain" }}
-            // src="/images/product.png"
             src={product}
           />
         </article>

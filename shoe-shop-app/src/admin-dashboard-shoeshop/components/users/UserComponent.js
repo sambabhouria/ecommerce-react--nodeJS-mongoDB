@@ -9,9 +9,13 @@ const UserComponent = () => {
   const dispatch = useDispatch();
 
   const userList = useSelector((state) => state.userList);
+  // console.log("userList", userList);
   const { loading, error, users } = userList;
 
+
+
   useEffect(() => {
+    console.log("@@@@")
     dispatch(listUser());
   }, [dispatch]);
   return (

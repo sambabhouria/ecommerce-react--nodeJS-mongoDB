@@ -238,6 +238,7 @@ export const adminLogout = () => (dispatch) => {
 
 // ALL USER
 export const listUser = () => async (dispatch, getState) => {
+    console.log("@@@@ == IN THE USER LIST == @@@")
     try {
       dispatch({ type: USER_LIST_REQUEST });
       const {
