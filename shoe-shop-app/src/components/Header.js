@@ -15,7 +15,6 @@ const Header = () => {
   const userLogin = useSelector((state) => state.userLogin);
   const dispatch  = useDispatch();
   const { userInfo } = userLogin;
-
   const logoutHandler = () => dispatch(logout())
 
   const submitHandler = (e) => {
@@ -53,9 +52,11 @@ const Header = () => {
               <Link to="">
                 <i className="fab fa-pinterest-p"></i>
               </Link>
-              <Link to="/admin" style={{backgroundColor: 'brown',  borderRadius: '5px', padding: '4px' }}>
+              {userInfo.isAdmin &&
+               <Link to="/admin" style={{backgroundColor: 'brown',  borderRadius: '5px', padding: '4px' }}>
                 <i class="fas fa-user-edit">Admin</i>
               </Link>
+              }
             </div>
           </div>
         </div>

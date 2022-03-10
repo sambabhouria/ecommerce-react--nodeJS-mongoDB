@@ -15,6 +15,7 @@ import UsersScreen from "./screens/UsersScreen";
 import ProductEditScreen from "./screens/ProductEditScreen";
 import Login from "./screens/LoginScreen";
 import NotFound from "./screens/NotFound";
+import PrivateRouter from "./PrivateRouter";
 
 const Admin = () => {
 
@@ -23,16 +24,16 @@ const Admin = () => {
     return (
       <div>
           <Switch>
-            <Route path={`${url}`} component={HomeScreen} exact />
-            <Route path= {`${url}/products`} component={ProductScreen} />
-            <Route path= {`${url}/category`} component={CategoriesScreen} />
-            <Route path= {`${url}/orders`} component={OrderScreen} />
-            <Route path= {`${url}/order/:id`} component={OrderDetailScreen} />
-            <Route path= {`${url}/addproduct`}  component={AddProduct} />
-            <Route path= {`${url}/users`}  component={UsersScreen} />
-            <Route path= {`${url}/product/:id/edit`}  component={ProductEditScreen} />
+            <PrivateRouter path={`${url}`} component={HomeScreen} exact />
+            <PrivateRouter path= {`${url}/products`} component={ProductScreen} />
+            <PrivateRouter path= {`${url}/category`} component={CategoriesScreen} />
+            <PrivateRouter path= {`${url}/orders`} component={OrderScreen} />
+            <PrivateRouter path= {`${url}/order/:id`} component={OrderDetailScreen} />
+            <PrivateRouter path= {`${url}/addproduct`}  component={AddProduct} />
+            <PrivateRouter path= {`${url}/users`}  component={UsersScreen} />
+            <PrivateRouter path= {`${url}/product/:id/edit`}  component={ProductEditScreen} />
             <Route path= {`${url}/login`} component={Login} />
-            <Route path="*" component={NotFound} />
+            <PrivateRouter path="*" component={NotFound} />
           </Switch>
       </div>
     );
